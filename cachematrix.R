@@ -2,7 +2,7 @@
 ## by cathing its reverse instead of computing it
 
 ## This function can creates a matrix which can cache its inverse (invs)
-## 
+## This function is not going to print the inverse of the matrix.
 makeCacheMatrix <- function(x = matrix()) {
   invs <- NULL
   set <- function(y) {
@@ -20,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## This function computes the inverse of the matrix created above
 ## If the inverse has been calculated, this function rerieve it from the cache.
+## This function prints the inverse of the matrix, beacuese it returns it from the cache
 cacheSolve <- function(x, ...) {
+   ## Return a matrix that is the inverse of 'x'
   invs <- x$getinverse()
   if (!is.null(invs)) {
     message("getting cached data")
